@@ -58,6 +58,7 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+<<<<<<< HEAD
 @font-face {
   font-family: "syncopate";
   src: url("../fonts/Syncopate-Regular.ttf") format("truetype");
@@ -148,10 +149,53 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 25rem;
   background-color: red;
   margin: 1rem;
+=======
+body {
+  max-width: 100%;
+  border: 0px;
+}
+
+footer {
+  background-color: rgba(170, 170, 170, 0.582);
+}
+footer #footer_socials {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+footer #footer_socials .footer_container {
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+footer #footer_socials .footer_container .footer_map {
+  float: right;
+  margin-left: 600px;
+}
+footer #footer_socials .footer_container .footer_data a {
+  padding: 10px;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  background-color: rgba(165, 164, 164, 0.815);
+  border-radius: 5%;
+  transition: transform 0.3s ease;
+}
+footer #footer_socials .footer_container .footer_data a:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(1.2);
+}
+footer #footer_socials .footer_container .footer_data p {
+  padding: 10px;
+  font-size: 20px;
+}
+footer #footer_socials .footer_bottom {
+>>>>>>> origin/Adri
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+<<<<<<< HEAD
 #menu article * {
   max-width: 80%;
 }
@@ -206,4 +250,22 @@ header section img {
   width: auto;
   max-height: 25px;
 >>>>>>> origin/isabelle
+=======
+footer #footer_socials .footer_bottom .bottom_info li {
+  float: right;
+  list-style-type: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  box-shadow: -2px 0px 0px 0px rgb(150, 148, 148);
+}
+footer #footer_socials .footer_bottom .social_network a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  padding: 25px;
+  transition: transform 0.3s ease;
+}
+footer #footer_socials .footer_bottom .social_network a:hover {
+  transform: scale(1.2);
+>>>>>>> origin/Adri
 }/*# sourceMappingURL=style.css.map */
