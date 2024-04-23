@@ -58,6 +58,7 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+<<<<<<< HEAD
 @font-face {
   font-family: "syncopate";
   src: url("../fonts/Syncopate-Regular.ttf") format("truetype");
@@ -66,6 +67,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: "syncopateBold";
   src: url("../fonts/Syncopate-Bold.ttf") format("truetype");
 }
+<<<<<<< HEAD
 @font-face {
   font-family: "syncopate";
   src: url("../fonts/Syncopate-Regular.ttf") format("truetype");
@@ -74,6 +76,173 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: "syncopateBold";
   src: url("../fonts/Syncopate-Bold.ttf") format("truetype");
 }
+=======
+<<<<<<< HEAD
+.fadeOut {
+  animation: fadeOut 0.4s linear forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+}
+.fadeIn {
+  animation: fadeIn 0.4s linear forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexCenterAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexCenterColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexCenterColumnAround {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexCenterColumnBetween {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#menu {
+  background-color: aqua;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+#menu article {
+  height: 35rem;
+  width: 25rem;
+  background-color: red;
+  margin: 1rem;
+=======
+body {
+  max-width: 100%;
+  border: 0px;
+}
+
+footer {
+  background-color: rgba(170, 170, 170, 0.582);
+}
+footer #footer_socials {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+footer #footer_socials .footer_container {
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+footer #footer_socials .footer_container .footer_map {
+  float: right;
+  margin-left: 600px;
+}
+footer #footer_socials .footer_container .footer_data a {
+  padding: 10px;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  background-color: rgba(165, 164, 164, 0.815);
+  border-radius: 5%;
+  transition: transform 0.3s ease;
+}
+footer #footer_socials .footer_container .footer_data a:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(1.2);
+}
+footer #footer_socials .footer_container .footer_data p {
+  padding: 10px;
+  font-size: 20px;
+}
+footer #footer_socials .footer_bottom {
+>>>>>>> origin/Adri
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+<<<<<<< HEAD
+#menu article * {
+  max-width: 80%;
+}
+#menu article h3 {
+  margin: 1rem;
+}
+#menu article img {
+  height: 10rem;
+  width: 20rem;
+}
+#menu article .category-and-price-of-article {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+#menu article .description-of-article {
+  height: 13rem;
+  overflow-y: auto;
+}
+#menu article input {
+  margin: 1rem;
+}
+
+main #about {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #about h2 {
+  font-family: "syncopate";
+=======
+>>>>>>> dev
 header {
   background-color: gainsboro;
   height: 8dvh;
@@ -90,8 +259,33 @@ header section {
   grid-template-rows: 75% 25%;
 }
 header section img {
+<<<<<<< HEAD
   grid-row: 1/3;
 }
 header section h2 {
   font-family: "sincopate" sans-serif;
+=======
+  height: 100%;
+  width: auto;
+  max-height: 25px;
+>>>>>>> origin/isabelle
+=======
+footer #footer_socials .footer_bottom .bottom_info li {
+  float: right;
+  list-style-type: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  box-shadow: -2px 0px 0px 0px rgb(150, 148, 148);
+}
+footer #footer_socials .footer_bottom .social_network a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  padding: 25px;
+  transition: transform 0.3s ease;
+}
+footer #footer_socials .footer_bottom .social_network a:hover {
+  transform: scale(1.2);
+>>>>>>> origin/Adri
+>>>>>>> dev
 }/*# sourceMappingURL=style.css.map */

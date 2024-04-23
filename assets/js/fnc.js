@@ -1,7 +1,7 @@
 // CREATE DIV
 function createDiv(type,parent,content,className) {
   const newDiv=document.createElement(type);
-  if (type!='') {
+  if (content!=null) {
     newDiv.innerHTML=content;
   }
   if (className!=null) {
@@ -18,7 +18,6 @@ function sleep(ms) {
 }
 
 //------------------------------------------------------------------------------------------
-
 // ESCAPE HTML
 function escapeHtml(text) {
   var map = {
@@ -28,7 +27,6 @@ function escapeHtml(text) {
     '"': '&quot;',
     "'": '&#039;'
   };
-  
   return text.replace(/[&<>"']/g, function(m) { return map[m]; });
 }
 

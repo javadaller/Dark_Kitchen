@@ -2,10 +2,11 @@
 <html>
 
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Dark Kitchen</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
         <link rel="icon" type="svg" href="assets/images/icons/hamburger.svg">
         <script defer src="assets/js/fnc.js"></script>
         <script defer src="assets/js/menu.js"></script>
@@ -15,17 +16,14 @@
     <body>
 
         <header>
-            <section class="logoAndTitle"><!--  logo -->
+            <section class="logoAndTitle">
                 <img src="assets\images\icons\hamburger.svg" alt="our logo" class="imgLogo">
                 <h2>Dark Burger</h2>
                 <p>Cooking in the dark</p>
             </section>
             
-            <!-- jour nuit -->
             <input type="checkbox" name="DarkMode" id="">
 
-            <!-- menu -->
-            <!-- <img src="assets\images\icons\icon-hamburger.svg" alt="menu symbol"> -->
             <nav>
                 <input type="button" value="home">
                 <input type="button" value="menu">
@@ -42,6 +40,19 @@
             </section>
             
             <section id="menu">
+                <article>
+                    <h3>Coco colo</h3>
+                    <img src="" alt="">
+                    <div class="category-and-price-of-article">
+                        <div class="category-of-article">Drink</div>
+                        <p class="price">2€</p>
+                    </div>
+                    <p class="description-of-article">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex rem sint excepturi dolore cum ipsum perspiciatis officiis ipsam aliquid aperiam iste debitis quam reprehenderit eaque aliquam mollitia, error laudantium praesentium soluta iure odit enim delectus. Id, doloremque? Voluptate beatae illum doloremque commodi alias molestias iure, consequatur dolor animi similique Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit totam quibusdam repellat incidunt vero ea, aspernatur nisi animi iusto inventore placeat quidem, in quo quaerat iste, illum numquam perferendis rem similique. Error ut quidem explicabo nostrum! Ipsum quidem dolorum minus libero facilis fugit natus eos, corrupti accusantium, expedita error maiores!.
+                    </p>
+                    <input type="button" value="add to cart">
+                </article>
+
                 <article>
                     <input type="button" value="add to cart">
                 </article>
@@ -61,26 +72,44 @@
 
             <section id="cart">
 
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <div>prix total</div>
-                <input type="button" value="commander">
-
             </section>
 
             <section id="about">
-                
+                <h2>About Dark Burger</h2>
+                <p>"Cooking in the dark"</p>
             </section>
 
         </main>
 
         <footer>
-            <section id="footer_socials"></section>
+            <section id="footer_socials">
+              <div class="footer_container">
+                <section class="footer_data">
+                     <a href="#">Contactez-nous</a>
+                     <p>Du lundi au dimanche de 12:00 à 23:00</p>
+                </section>
+            
+                <!-- <section class="footer_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5085.8617762675785!2d4.437540376827137!3d50.40512559062592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c226750391b893%3A0x38f706c7ffab5a0c!2sBeCode%20Charleroi!5e0!3m2!1sfr!2sbe!4v1713866597681!5m2!1sfr!2sbe" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section> -->
+            </div>
+            <div class="footer_bottom">
+                <section class="social_network">
+                        <a href="https://www.facebook.com/?locale=fr_FR" class="fa fa-facebook" target="_blank"></a>
+                        <a href="https://www.youtube.com/watch?v=IYMT-7FbHi4" class="fa fa-youtube" target="_blank"></a>
+                        <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+                        <a href="https://github.com/javadaller" class="fa fa-github" target="_blank"></a>
+                        <a href="https://github.com/DenisLettany" class="fa fa-github" target="_blank"></a>
+                        <a href="https://github.com/isab95" class="fa fa-github" target="_blank"></a>
+                        <a href="https://github.com/AdCa09" class="fa fa-github" target="_blank"></a>
+                </section>
+                <ul class="bottom_info">
+                    <li>BE0125.111.111</li>
+                    <li>Mentions légales</li>
+                    <li>Cookies</li>
+                </ul>
+            </div>
+            </section>
         </footer>
 
     </body>
