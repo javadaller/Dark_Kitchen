@@ -66,6 +66,21 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: "syncopateBold";
   src: url("../fonts/Syncopate-Bold.ttf") format("truetype");
 }
+<<<<<<< HEAD
+@font-face {
+  font-family: "nanumPenScript";
+  src: url("../fonts/NanumPenScript-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "barlow";
+  src: url("../fonts/Barlow-Regular.ttf") format("truetype");
+}
+body {
+  font-family: "barlow";
+}
+
+=======
+>>>>>>> origin/isabelle
 .fadeOut {
   animation: fadeOut 0.4s linear forwards;
 }
@@ -94,6 +109,11 @@ p, h1, h2, h3, h4, h5, h6 {
     filter: blur(0);
   }
 }
+<<<<<<< HEAD
+header {
+  background-color: gainsboro;
+  height: 10%;
+=======
 @font-face {
   font-family: "syncopate";
   src: url("../fonts/Syncopate-Regular.ttf") format("truetype");
@@ -105,11 +125,23 @@ p, h1, h2, h3, h4, h5, h6 {
 header {
   background-color: gainsboro;
   height: 9dvb;
+>>>>>>> origin/isabelle
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 header section {
+<<<<<<< HEAD
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 50%;
+  display: flexbox;
+}
+header section img {
+  height: 100%;
+  width: auto;
+  max-height: 25px;
+=======
   height: 100%;
   width: 40%;
   display: grid;
@@ -170,6 +202,7 @@ header nav ul .cart {
 }
 header nav ul .about {
   grid-column: 4/5;
+>>>>>>> origin/isabelle
 }
 
 .flexCenter {
@@ -212,7 +245,62 @@ header nav ul .about {
   transform: translate(-50%, -50%);
 }
 
-#menu {
+main {
+  height: 100vh;
+}
+main #home {
+  width: 100%;
+  height: 100%;
+}
+main #home div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #home div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 65%;
+     object-position: 50% 65%;
+  filter: brightness(65%) contrast(100%) saturate(150%);
+}
+main #home div h1 {
+  font-family: "syncopateBold";
+  font-size: 6vw;
+  color: white;
+  text-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+main #home div p {
+  font-family: "nanumPenScript";
+  font-size: 4vw;
+  color: white;
+  text-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+main #home div article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+main #home div article p {
+  width: 50%;
+  height: auto;
+  font-family: "barlow";
+  font-size: 1.8vw;
+  text-align: justify;
+}
+main #menu {
   background-color: aqua;
   min-height: 100vh;
   width: 100%;
@@ -220,7 +308,7 @@ header nav ul .about {
   flex-flow: row wrap;
   justify-content: center;
 }
-#menu article {
+main #menu article {
   height: 35rem;
   width: 25rem;
   background-color: red;
@@ -229,6 +317,19 @@ header nav ul .about {
   flex-direction: column;
   align-items: center;
 }
+<<<<<<< HEAD
+main #menu article * {
+  max-width: 80%;
+}
+main #menu article h3 {
+  margin: 1rem;
+}
+main #menu article img {
+  height: 10rem;
+  width: 20rem;
+}
+main #menu article .category-and-price-of-article {
+=======
 #menu article * {
   max-width: 80%;
 }
@@ -240,12 +341,30 @@ header nav ul .about {
   width: 20rem;
 }
 #menu article .category-and-price-of-article {
+>>>>>>> origin/isabelle
   margin: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 90%;
 }
+<<<<<<< HEAD
+main #menu article .description-of-article {
+  height: 13rem;
+  overflow-y: auto;
+}
+main #menu article input {
+  margin: 1rem;
+}
+main #about {
+  width: 100%;
+  height: 100%;
+}
+main #about div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+=======
 #menu article .description-of-article {
   height: 13rem;
   overflow-y: auto;
@@ -257,13 +376,41 @@ header nav ul .about {
 main #about {
   width: 100%;
   height: auto;
+>>>>>>> origin/isabelle
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+<<<<<<< HEAD
+main #about div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 80%;
+     object-position: 50% 80%;
+  filter: brightness(65%) contrast(100%) saturate(150%);
+}
+main #about div p {
+  font-family: "nanumPenScript";
+  font-size: 4vw;
+  color: white;
+  text-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+main #about div h2 {
+  font-family: "syncopateBold";
+  font-size: 4vw;
+  color: white;
+  text-shadow: 0px 0px 8px rgb(0, 0, 0);
+=======
 main #about h2 {
   font-family: "syncopate";
+>>>>>>> origin/isabelle
 }
 
 body {
