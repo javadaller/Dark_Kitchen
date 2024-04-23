@@ -58,7 +58,6 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-<<<<<<< HEAD
 @font-face {
   font-family: "syncopate";
   src: url("../fonts/Syncopate-Regular.ttf") format("truetype");
@@ -67,7 +66,6 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: "syncopateBold";
   src: url("../fonts/Syncopate-Bold.ttf") format("truetype");
 }
-<<<<<<< HEAD
 .fadeOut {
   animation: fadeOut 0.4s linear forwards;
 }
@@ -96,6 +94,25 @@ p, h1, h2, h3, h4, h5, h6 {
     filter: blur(0);
   }
 }
+header {
+  background-color: gainsboro;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header section {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 50%;
+  display: flexbox;
+}
+header section img {
+  height: 100%;
+  width: auto;
+  max-height: 25px;
+}
+
 .flexCenter {
   display: flex;
   justify-content: center;
@@ -149,7 +166,47 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 25rem;
   background-color: red;
   margin: 1rem;
-=======
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#menu article * {
+  max-width: 80%;
+}
+#menu article h3 {
+  margin: 1rem;
+}
+#menu article img {
+  height: 10rem;
+  width: 20rem;
+}
+#menu article .category-and-price-of-article {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+#menu article .description-of-article {
+  height: 13rem;
+  overflow-y: auto;
+}
+#menu article input {
+  margin: 1rem;
+}
+
+main #about {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #about h2 {
+  font-family: "syncopate";
+}
+
 body {
   max-width: 100%;
   border: 0px;
@@ -190,67 +247,10 @@ footer #footer_socials .footer_container .footer_data p {
   font-size: 20px;
 }
 footer #footer_socials .footer_bottom {
->>>>>>> origin/Adri
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-<<<<<<< HEAD
-#menu article * {
-  max-width: 80%;
-}
-#menu article h3 {
-  margin: 1rem;
-}
-#menu article img {
-  height: 10rem;
-  width: 20rem;
-}
-#menu article .category-and-price-of-article {
-  margin: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
-}
-#menu article .description-of-article {
-  height: 13rem;
-  overflow-y: auto;
-}
-#menu article input {
-  margin: 1rem;
-}
-
-main #about {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-main #about h2 {
-  font-family: "syncopate";
-=======
-header {
-  background-color: gainsboro;
-  height: 10%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-header section {
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 50%;
-  display: flexbox;
-}
-header section img {
-  height: 100%;
-  width: auto;
-  max-height: 25px;
->>>>>>> origin/isabelle
-=======
 footer #footer_socials .footer_bottom .bottom_info li {
   float: right;
   list-style-type: none;
@@ -267,5 +267,4 @@ footer #footer_socials .footer_bottom .social_network a {
 }
 footer #footer_socials .footer_bottom .social_network a:hover {
   transform: scale(1.2);
->>>>>>> origin/Adri
 }/*# sourceMappingURL=style.css.map */
