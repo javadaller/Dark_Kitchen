@@ -58,48 +58,6 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-<<<<<<< HEAD
-#menu {
-  background-color: aqua;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-#menu article {
-  height: 35rem;
-  width: 25rem;
-  background-color: red;
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#menu article * {
-  max-width: 80%;
-}
-#menu article h3 {
-  margin: 1rem;
-}
-#menu article img {
-  height: 10rem;
-  width: 20rem;
-}
-#menu article .category-and-price-of-article {
-  margin: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
-}
-#menu article .description-of-article {
-  height: 13rem;
-  overflow-y: auto;
-}
-#menu article input {
-  margin: 1rem;
-=======
 @font-face {
   font-family: "syncopate";
   src: url("../fonts/Syncopate-Regular.ttf") format("truetype");
@@ -176,6 +134,48 @@ p, h1, h2, h3, h4, h5, h6 {
   transform: translate(-50%, -50%);
 }
 
+#menu {
+  background-color: aqua;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+#menu article {
+  height: 35rem;
+  width: 25rem;
+  background-color: red;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#menu article * {
+  max-width: 80%;
+}
+#menu article h3 {
+  margin: 1rem;
+}
+#menu article img {
+  height: 10rem;
+  width: 20rem;
+}
+#menu article .category-and-price-of-article {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+#menu article .description-of-article {
+  height: 13rem;
+  overflow-y: auto;
+}
+#menu article input {
+  margin: 1rem;
+}
+
 main #about {
   width: 100%;
   height: auto;
@@ -186,5 +186,4 @@ main #about {
 }
 main #about h2 {
   font-family: "syncopate";
->>>>>>> arnaud
 }/*# sourceMappingURL=style.css.map */
