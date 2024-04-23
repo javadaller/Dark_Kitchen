@@ -56,4 +56,8 @@ p, h1, h2, h3, h4, h5, h6 {
 */
 #root, #__next {
   isolation: isolate;
+}
+
+header {
+  background-color: #2897b9;
 }/*# sourceMappingURL=style.css.map */
