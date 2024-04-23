@@ -1,0 +1,14 @@
+@use "extends";
+
+main {
+    #about {
+        @include box(100%,auto);
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            font-family: 'syncopate';
+        }
+    }
+}

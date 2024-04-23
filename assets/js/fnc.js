@@ -1,7 +1,7 @@
 // CREATE DIV
 function createDiv(type,parent,content,className) {
   const newDiv=document.createElement(type);
-  if (type!='') {
+  if (content!=null) {
     newDiv.innerHTML=content;
   }
   if (className!=null) {

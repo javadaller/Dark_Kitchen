@@ -56,4 +56,92 @@ p, h1, h2, h3, h4, h5, h6 {
 */
 #root, #__next {
   isolation: isolate;
+}
+
+@font-face {
+  font-family: "syncopate";
+  src: url("../fonts/Syncopate-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "syncopateBold";
+  src: url("../fonts/Syncopate-Bold.ttf") format("truetype");
+}
+.fadeOut {
+  animation: fadeOut 0.4s linear forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+}
+.fadeIn {
+  animation: fadeIn 0.4s linear forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexCenterAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexCenterColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexCenterColumnAround {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexCenterColumnBetween {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main #about {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #about h2 {
+  font-family: "syncopate";
 }/*# sourceMappingURL=style.css.map */
