@@ -136,6 +136,41 @@ header section p {
   padding-left: 15%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+header nav {
+  width: 45%;
+  margin-right: 2%;
+}
+header nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 9dvh;
+  align-items: center;
+}
+header nav ul li {
+  justify-self: center;
+  color: black;
+  background-color: white;
+  padding: auto;
+  margin: 1dvw;
+  border-radius: 30px;
+}
+header nav ul li:hover {
+  background: rgba(255, 255, 255, 0.2537);
+  color: white;
+}
+header nav ul .home {
+  grid-column: 1/2;
+}
+header nav ul .menu {
+  grid-column: 2/3;
+}
+header nav ul .cart {
+  grid-column: 3/4;
+}
+header nav ul .about {
+  grid-column: 4/5;
+}
 
 .flexCenter {
   display: flex;
