@@ -64,58 +64,50 @@ body {
 }
 
 footer {
-  background-color: rgba(170, 170, 170, 0.582);
-}
-footer #footer_socials {
-  display: flex;
-  flex-direction: column;
-  padding-top: 30px;
-}
-footer #footer_socials .footer_container {
-  width: 100%;
-  display: flex;
+  max-height: 65%;
+  padding-bottom: 20px;
   text-align: center;
+  background-color: rgb(216, 215, 215);
 }
-footer #footer_socials .footer_container .footer_map {
-  float: right;
-  margin-left: 600px;
-}
-footer #footer_socials .footer_container .footer_data a {
-  padding: 10px;
+footer h3 {
+  padding-top: 10px;
   font-size: 25px;
-  color: black;
-  text-decoration: none;
-  background-color: rgba(165, 164, 164, 0.815);
-  border-radius: 5%;
-  transition: transform 0.3s ease;
 }
-footer #footer_socials .footer_container .footer_data a:hover {
-  color: rgb(255, 255, 255);
-  transform: scale(1.2);
-}
-footer #footer_socials .footer_container .footer_data p {
-  padding: 10px;
-  font-size: 20px;
-}
-footer #footer_socials .footer_bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-footer #footer_socials .footer_bottom .bottom_info li {
-  float: right;
+footer li {
   list-style-type: none;
-  padding-right: 10px;
-  padding-left: 10px;
-  box-shadow: -2px 0px 0px 0px rgb(150, 148, 148);
 }
-footer #footer_socials .footer_bottom .social_network a {
+footer a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-size: 25px;
-  padding: 25px;
-  transition: transform 0.3s ease;
+  color: grey;
+  transition: 0.2s ease;
+  font-size: 20px;
+  padding: 5px;
 }
-footer #footer_socials .footer_bottom .social_network a:hover {
+footer .social_media ul li {
+  display: inline;
+}
+footer .social_media ul li a {
+  transition: 0.4s ease;
+}
+footer .social_media ul li a:hover {
   transform: scale(1.2);
+}
+footer .location a:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 2px 0px 0px;
+}
+footer .policy_links a:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 2px 0px 0px;
+}
+footer .github_contributors {
+  padding-top: 10px;
+}
+footer .github_contributors a {
+  padding-right: 10px;
+  transition: 0.4s ease;
+  font-size: 35px;
+}
+footer .github_contributors a:hover {
+  transform: scale(1.5);
 }/*# sourceMappingURL=style.css.map */
