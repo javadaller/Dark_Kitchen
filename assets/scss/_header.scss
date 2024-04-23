@@ -1,3 +1,37 @@
-header {
-    background-color: #2897b9;
+
+
+header{
+    background-color: gainsboro;
+    height: 10%;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    section {
+        height: fit-content;
+        width: 50%;
+        display: flexbox;
+        img{
+            height: 100%;
+            width: auto;
+            max-height: 25px;;
+            
+        }
+    }
 }
+
+// @media  and (max-width : 500px) {
+//    header {
+//     background-color: #2897b9;
+    
+//     .imgLogo{
+        
+//     }
+//     /*section{
+//         height: 10%;
+//         img{
+//             height : 30px;
+//             width: auto;
+//         }
+//     }*/
+// } 
+// }

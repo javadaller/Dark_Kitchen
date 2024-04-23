@@ -58,6 +58,29 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+@font-face {
+  font-family: "syncopate";
+  src: url("../fonts/Syncopate-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "syncopateBold";
+  src: url("../fonts/Syncopate-Bold.ttf") format("truetype");
+}
 header {
-  background-color: #2897b9;
+  background-color: gainsboro;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header section {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 50%;
+  display: flexbox;
+}
+header section img {
+  height: 100%;
+  width: auto;
+  max-height: 25px;
 }/*# sourceMappingURL=style.css.map */
