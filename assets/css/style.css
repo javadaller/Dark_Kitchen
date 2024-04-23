@@ -66,6 +66,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: "syncopateBold";
   src: url("../fonts/Syncopate-Bold.ttf") format("truetype");
 }
+<<<<<<< HEAD
 .fadeOut {
   animation: fadeOut 0.4s linear forwards;
 }
@@ -186,4 +187,23 @@ main #about {
 }
 main #about h2 {
   font-family: "syncopate";
+=======
+header {
+  background-color: gainsboro;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header section {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 50%;
+  display: flexbox;
+}
+header section img {
+  height: 100%;
+  width: auto;
+  max-height: 25px;
+>>>>>>> origin/isabelle
 }/*# sourceMappingURL=style.css.map */
