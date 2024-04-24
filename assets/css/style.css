@@ -1,0 +1,423 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: "syncopate";
+  src: url("../fonts/Syncopate-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "syncopateBold";
+  src: url("../fonts/Syncopate-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "nanumPenScript";
+  src: url("../fonts/NanumPenScript-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "barlow";
+  src: url("../fonts/Barlow-Regular.ttf") format("truetype");
+}
+body {
+  font-family: "barlow";
+}
+
+.fadeOut {
+  animation: fadeOut 0.4s linear forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+}
+.fadeIn {
+  animation: fadeIn 0.4s linear forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+header {
+  color: #17170F;
+  background-color: #62574E;
+  height: 9dvh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+}
+header section {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2%;
+}
+header section img {
+  padding: auto;
+  height: 75%;
+}
+header section h2 {
+  margin-left: 2%;
+  text-wrap: nowrap;
+  padding: 1%;
+  font-family: "syncopate";
+  font-size: 1.6em;
+}
+header nav {
+  width: 45%;
+  margin-right: 2%;
+}
+header nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 9dvh;
+  align-items: center;
+  text-wrap: nowrap;
+}
+header nav ul li {
+  justify-self: center;
+  color: black;
+  background-color: white;
+  padding: 4% 8%;
+  margin: 1dvw;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "barlow";
+}
+header nav ul li:hover {
+  background: rgba(255, 255, 255, 0.2537);
+  color: white;
+}
+header nav ul .home {
+  grid-column: 1/2;
+}
+header nav ul .menu {
+  grid-column: 2/3;
+}
+header nav ul .cart {
+  grid-column: 3/4;
+}
+header nav ul .about {
+  grid-column: 4/5;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexCenterAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexCenterColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexCenterColumnAround {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexCenterColumnBetween {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main {
+  height: 100vh;
+}
+main #home {
+  width: 100%;
+  height: 100%;
+}
+main #home div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #home div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 65%;
+     object-position: 50% 65%;
+  filter: brightness(250%) contrast(30%);
+}
+main #home div h1 {
+  font-family: "syncopateBold";
+  font-size: 6vw;
+  color: #17170F;
+  text-shadow: 0px 0px 8px #62574E;
+}
+main #home div p {
+  font-family: "nanumPenScript";
+  font-size: 4vw;
+  color: #17170F;
+  text-shadow: 0px 0px 8px #62574E;
+}
+main #home div article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+main #home div article p {
+  width: 50%;
+  height: auto;
+  font-family: "barlow";
+  font-size: 1.8vw;
+  text-align: justify;
+}
+main #menu {
+  background-color: aqua;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+main #menu article {
+  height: 35rem;
+  width: 25rem;
+  background-color: red;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main #menu article * {
+  max-width: 80%;
+}
+main #menu article h3 {
+  margin: 1rem;
+}
+main #menu article img {
+  height: 10rem;
+  width: 20rem;
+}
+main #menu article .category-and-price-of-article {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+main #menu article .description-of-article {
+  height: 13rem;
+  overflow-y: auto;
+}
+main #menu article input {
+  margin: 1rem;
+}
+main #about {
+  width: 100%;
+  height: 100%;
+}
+main #about div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #about div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 80%;
+     object-position: 50% 80%;
+  filter: brightness(65%) contrast(100%) saturate(150%);
+}
+main #about div p {
+  font-family: "nanumPenScript";
+  font-size: 4vw;
+  color: #17170F;
+  text-shadow: 0px 0px 8px #62574E;
+}
+main #about div h2 {
+  font-family: "syncopateBold";
+  font-size: 4vw;
+  color: #17170F;
+  text-shadow: 0px 0px 8px #62574E;
+}
+
+footer {
+  color: #17170F;
+  background-color: #62574E;
+  max-height: 65%;
+  padding-bottom: 20px;
+  text-align: center;
+}
+footer h3 {
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 25px;
+}
+footer li {
+  list-style-type: none;
+}
+footer a {
+  text-decoration: none;
+  color: grey;
+  transition: 0.2s ease;
+  font-size: 20px;
+  padding: 5px;
+}
+footer .social_media ul {
+  padding-right: 20px;
+  padding-left: 50px;
+}
+footer .social_media ul li {
+  display: inline;
+}
+footer .social_media ul li a {
+  transition: 0.4s ease;
+}
+footer .social_media ul li a:hover {
+  transform: scale(1.2);
+}
+footer .location p {
+  padding-left: 20px;
+}
+footer .location a:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 2px 0px 0px;
+}
+footer .policy_links a:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 2px 0px 0px;
+}
+footer .github_contributors {
+  padding-top: 10px;
+}
+footer .github_contributors a {
+  padding-right: 10px;
+  transition: 0.4s ease;
+  font-size: 35px;
+}
+footer .github_contributors a:hover {
+  transform: scale(1.5);
+}/*# sourceMappingURL=style.css.map */
