@@ -2,7 +2,7 @@
 const main=document.querySelector('main');
 const home=document.querySelector('#home');
 
-const navArray=Array.from(document.querySelector('nav').children);
+const navArray=Array.from(document.querySelector('ul').children);
 const sectionArray=Array.from(document.querySelector('main').children);
 sectionArray.forEach(section => {
     section.style.display='none';

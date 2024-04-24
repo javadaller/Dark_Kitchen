@@ -1,23 +1,84 @@
 
 
 header{
-    background-color: gainsboro;
-    height: 10%;
+    color:$colorText;
+    background-color: $colorBackground;
+    height: 9dvh;
     width:100%;
+    position: fixed;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
+
     section {
-        height: fit-content;
-        width: 50%;
-        display: flexbox;
+        height: 100%;
+        // width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin-left: 2%;
         img{
-            height: 100%;
-            width: auto;
-            max-height: 25px;;
             
+            padding: auto;
+            height: 75%;
         }
-    }
-}
+        h2{
+            // grid-column: 2/3;
+            // grid-row: 1/2;
+            margin-left: 2%;
+            text-wrap:nowrap;
+            padding: 1%;
+            font: {
+                family :'syncopate';
+                size: 1.6em;
+            }            
+        }//end h2
+        
+    }//end section logoAndTitle
+
+    nav{
+        width: 45%;
+        margin-right: 2%;
+        ul{
+            list-style: none;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 9dvh;
+            align-items: center;
+            text-wrap: nowrap;
+            li{
+                justify-self: center;
+                color: black;
+                background-color: white;
+                
+                padding: 4% 8%;
+                margin: 1dvw;
+                border-radius: 30px;
+                cursor: pointer;
+                font-family: "barlow";
+                &:hover{
+                    background: rgba(255, 255, 255, 0.2537);
+
+                    color: white;
+                }
+            }//end li
+            .home{
+                grid-column: 1/2;
+            }
+            .menu{
+                grid-column: 2/3;
+            }
+            .cart{
+                grid-column: 3/4;
+            }
+            .about{
+                grid-column: 4/5;
+            }
+
+        }//end ul
+    }//end nav
+}//end header
 
 // @media  and (max-width : 500px) {
 //    header {
