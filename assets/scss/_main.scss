@@ -193,26 +193,27 @@ main {
     }
 }
 
-@media screen and (max-width:500px) {
+//responsive
+// @media screen and (max-width:500px) {
 
-    body {
-        width: 100%;
-        border: 0px;
-        margin: 0px;
+//     body {
+//         width: 100%;
+//         border: 0px;
+//         margin: 0px;
 
-        iframe {
-            width: 50%;
-            height: 40%;
-        }
+//         iframe {
+//             width: 50%;
+//             height: 40%;
+//         }
 
-        #about {
-            .team_about {
+//         #about {
+//             .team_about {
 
-                display: flex;
-                flex-direction: column;
-            }
-        }
+//                 display: flex;
+//                 flex-direction: column;
+//             }
+//         }
 
-    }
+//     }
 
-}
+// }

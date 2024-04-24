@@ -423,21 +423,6 @@ main #about .team_about .team_name_link a:hover {
   color: rgb(213, 213, 213);
 }
 
-@media screen and (max-width: 500px) {
-  body {
-    width: 100%;
-    border: 0px;
-    margin: 0px;
-  }
-  body iframe {
-    width: 50%;
-    height: 40%;
-  }
-  body #about .team_about {
-    display: flex;
-    flex-direction: column;
-  }
-}
 footer {
   max-height: 65%;
   padding-bottom: 20px;
