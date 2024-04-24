@@ -74,6 +74,16 @@ h6 {
   isolation: isolate;
 }
 
+.lightMode {
+  color: #17170F;
+  background-color: #62574E;
+}
+
+.darkMode {
+  color: #c4c7be;
+  background-color: #583E31;
+}
+
 @font-face {
   font-family: "syncopate";
   src: url("../fonts/Syncopate-Regular.ttf") format("truetype");
@@ -122,6 +132,16 @@ body {
     filter: blur(0);
   }
 }
+.lightMode {
+  color: #17170F;
+  background-color: #62574E;
+}
+
+.darkMode {
+  color: #c4c7be;
+  background-color: #583E31;
+}
+
 header {
   color: #17170F;
   background-color: #62574E;
@@ -131,6 +151,15 @@ header {
   z-index: 100;
   display: flex;
   justify-content: space-between;
+}
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  background: linear-gradient(180deg, #62574E 0%, rgba(0, 0, 0, 0) 100%);
+  width: 100%;
+  height: 30px;
 }
 header section {
   height: 100%;
@@ -144,9 +173,9 @@ header section img {
   height: 75%;
 }
 header section h2 {
+  line-height: 0.5;
   margin-left: 2%;
-  text-wrap: nowrap;
-  padding: 1%;
+  white-space: nowrap;
   font-family: "syncopate";
   font-size: 1.6em;
 }
@@ -246,31 +275,34 @@ main #home div {
   align-items: center;
 }
 main #home div img {
+  background: #ffffff;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 65%;
      object-position: 50% 65%;
-  filter: brightness(250%) contrast(30%);
+  filter: brightness(300%) contrast(40%);
 }
 main #home div h1 {
+  z-index: 2;
   font-family: "syncopateBold";
   font-size: 6vw;
   color: #17170F;
   text-shadow: 0px 0px 8px #62574E;
 }
 main #home div p {
+  z-index: 2;
   font-family: "nanumPenScript";
   font-size: 4vw;
   color: #17170F;
   text-shadow: 0px 0px 8px #62574E;
 }
 main #home div article {
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -283,6 +315,9 @@ main #home div article p {
   font-family: "barlow";
   font-size: 1.8vw;
   text-align: justify;
+  background-color: white;
+  padding: 3%;
+  border-radius: 25px;
 }
 main #menu {
   background-color: aqua;
@@ -291,6 +326,12 @@ main #menu {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+}
+main #menu .category-menu ul {
+  list-style: none;
+}
+main #menu .category-menu ul li {
+  display: inline-block;
 }
 main #menu article {
   height: 35rem;

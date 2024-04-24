@@ -35,3 +35,26 @@ async function switchAnimation(section) {
     await sleep(400);
     main.classList.remove('fadeIn');
 }
+
+//DARK MODE
+const body=document.querySelector('body');
+const header=document.querySelector('header');
+const footer=document.querySelector('footer');
+const pageArray=[body,header,main,footer];
+
+const inputDarkMode=document.querySelector('#theme');
+
+inputDarkMode.addEventListener('click', function(){
+    if(inputDarkMode.checked) {
+        pageArray.forEach(element => {
+            element.classList.add('darkMode');
+            element.classList.remove('lightMode'); 
+        });
+        
+    } else {
+        pageArray.forEach(element => {
+            element.classList.remove('darkMode');
+            element.classList.add('lightMode'); 
+        });
+    }
+})
