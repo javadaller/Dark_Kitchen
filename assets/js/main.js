@@ -40,7 +40,11 @@ async function switchAnimation(section) {
 const body=document.querySelector('body');
 const header=document.querySelector('header');
 const footer=document.querySelector('footer');
-const pageArray=[body,header,main,footer];
+const doc=[body,header,main,footer];
+const pageArray=[...doc,...Array.from(document.querySelectorAll('.toDark'))];
+const svgs=Array.from(document.querySelectorAll('.svgToDark'));
+
+const images=document.querySelectorAll('.imgBackground');
 
 const inputDarkMode=document.querySelector('#theme');
 
@@ -50,11 +54,31 @@ inputDarkMode.addEventListener('click', function(){
             element.classList.add('darkMode');
             element.classList.remove('lightMode'); 
         });
+
+        images.forEach(element => {
+            element.classList.add('imgDarkMode');
+            element.classList.remove('imgLightMode'); 
+        });
+
+        svgs.forEach(element => {
+            element.classList.add('svgToWhite');
+            element.classList.remove('svgToDark'); 
+        })
         
     } else {
         pageArray.forEach(element => {
             element.classList.remove('darkMode');
             element.classList.add('lightMode'); 
         });
+
+        images.forEach(element => {
+            element.classList.remove('imgDarkMode');
+            element.classList.add('imgLightMode'); 
+        });
+
+        svgs.forEach(element => {
+            element.classList.remove('svgToWhite');
+            element.classList.add('svgToDark'); 
+        })
     }
 })
