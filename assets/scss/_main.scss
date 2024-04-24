@@ -28,15 +28,15 @@ main {
             h1 {
                 font-family: 'syncopateBold';
                 font-size: 6vw;
-                color:$homeTitle;
-                text-shadow: 0px 0px 8px $homeTitleShadow;
+                color:$colorText;
+                text-shadow: 0px 0px 8px $colorBackground;
             }
 
             p {
                 font-family: 'nanumPenScript';
                 font-size: 4vw;
-                color:$homeTitle;
-                text-shadow: 0px 0px 8px $homeTitleShadow;
+                color:$colorText;
+                text-shadow: 0px 0px 8px $colorBackground;
             }
 
             article {
@@ -124,15 +124,15 @@ main {
             p {
                 font-family: 'nanumPenScript';
                 font-size: 4vw;
-                color:$homeTitle;
-                text-shadow: 0px 0px 8px $homeTitleShadow;
+                color:$colorText;
+                text-shadow: 0px 0px 8px $colorBackground;
             }
 
             h2 {
                 font-family: 'syncopateBold';
                 font-size: 4vw;
-                color:$homeTitle;
-                text-shadow: 0px 0px 8px $homeTitleShadow;
+                color:$colorText;
+                text-shadow: 0px 0px 8px $colorBackground;
             }
         }
     }
