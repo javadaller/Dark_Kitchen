@@ -330,19 +330,29 @@ main #home div article p {
 }
 main #menu {
   background-color: aqua;
-  min-height: 100vh;
+  height: auto;
   width: 100%;
+}
+main #menu .menu-and-articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main #menu .menu-and-articles .category-menu {
+  padding-top: 10vh;
+}
+main #menu .menu-and-articles .category-menu ul {
+  list-style: none;
+}
+main #menu .menu-and-articles .category-menu ul li {
+  display: inline-block;
+}
+main #menu .menu-and-articles .list-articles {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
-main #menu .category-menu ul {
-  list-style: none;
-}
-main #menu .category-menu ul li {
-  display: inline-block;
-}
-main #menu article {
+main #menu .menu-and-articles .list-articles article {
   height: 35rem;
   width: 25rem;
   background-color: red;
@@ -351,29 +361,32 @@ main #menu article {
   flex-direction: column;
   align-items: center;
 }
-main #menu article * {
+main #menu .menu-and-articles .list-articles article * {
   max-width: 80%;
 }
-main #menu article h3 {
+main #menu .menu-and-articles .list-articles article h3 {
   margin: 1rem;
 }
-main #menu article img {
+main #menu .menu-and-articles .list-articles article img {
   height: 10rem;
   width: 20rem;
 }
-main #menu article .category-and-price-of-article {
+main #menu .menu-and-articles .list-articles article .category-and-price-of-article {
   margin: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 90%;
 }
-main #menu article .description-of-article {
+main #menu .menu-and-articles .list-articles article .description-of-article {
   height: 13rem;
   overflow-y: auto;
 }
-main #menu article input {
+main #menu .menu-and-articles .list-articles article input {
   margin: 1rem;
+}
+main #cart .cart-content {
+  padding-top: 10vh;
 }
 main #about {
   width: 100%;

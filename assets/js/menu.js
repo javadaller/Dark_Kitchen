@@ -230,6 +230,51 @@ const menuData= [
 const listArticles = document.querySelector(".list-articles")
 const ulCategoryMenu = document.querySelector(".ul-category-menu")
 let filter
+const ulCart = document.querySelector('.list-add-to-cart')
+
+const displayCalcul = total => {
+    const displayTotal = document.querySelector('.cart-content h3')
+    displayTotal.innerText = `
+        Total: ${total}€
+    `
+}
+
+// début calcul des éléments du panier
+    const calculCart = () => {
+        const cartItems = document.querySelectorAll('.cart-content ul li');
+        const totalPrice = Array.from(cartItems).reduce((total, cartItem) => {
+            const quantity = parseInt(cartItem.querySelector('.cart-quantity').value);
+            const price = parseFloat(cartItem.dataset.price);
+            return total + (quantity * price);
+        }, 0);
+        displayCalcul(totalPrice.toFixed(2))
+    }
+// fin calcul des éléments du panier
+
+// création du panier
+    const addToCart = article => {
+        const alreadyExist = document.querySelector(`.cart-content ul li[data-name="${article.name}"]`)
+
+        if (alreadyExist) {
+            const quantitySpecificArticle = alreadyExist.querySelector('.cart-quantity')
+            quantitySpecificArticle.value++
+            calculCart()
+        } else {
+            const cartArticleCreation = document.createElement('li')
+            cartArticleCreation.dataset.name = article.name
+            cartArticleCreation.dataset.price = article.price
+            cartArticleCreation.innerHTML = `
+            <span class="cart-name">${article.name}</span>
+            <input class="cart-quantity" type="number" value="1">
+            `
+            const inputNumber = cartArticleCreation.querySelector('input')
+            inputNumber.addEventListener('change', () => {
+                calculCart()
+            })
+            ulCart.append(cartArticleCreation)
+        }
+    }
+// fin création du panier
 
 // début création du filtre
 const createFilter = menuData.reduce((acc, item) => {
@@ -285,6 +330,12 @@ const displayArticles = () => {
         </p>
         <input type="button" value="add to cart">
         `
+        const input = article.querySelector('input')
+        input.addEventListener('click', () => {
+            addToCart(item)
+            calculCart()
+        })
+
         return article
     })
 

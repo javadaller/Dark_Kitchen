@@ -65,59 +65,69 @@ main {
 
     #menu {
         background-color: aqua;
-        min-height: 100vh;
+        height: auto;
         width: 100%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-
-        .category-menu {
-            ul {
-                list-style: none;
-                li {
-                    display: inline-block;
-                }
-            }
-        }
-        article {
-            height: 35rem;
-            width: 25rem;
-            background-color: red;
-            margin: 1rem;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        .menu-and-articles {
             display: flex;
             flex-direction: column;
             align-items: center;
-
-            * {
-                max-width: 80%;
+            .category-menu {
+                padding-top: 10vh;
+                ul {
+                    list-style: none;
+                    li {
+                        display: inline-block;
+                    }
+                }
             }
-
-            h3 {
-                margin: 1rem;
-            }
-
-            img {
-                height: 10rem;
-                width: 20rem;
-            }
-
-            .category-and-price-of-article {
-                margin: 1rem;
+            .list-articles {
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                width: 90%;
-
+                flex-flow: row wrap;
+                justify-content: center;
+                article {
+                    height: 35rem;
+                    width: 25rem;
+                    background-color: red;
+                    margin: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    * {
+                        max-width: 80%;
+                    }
+                    h3 {
+                        margin: 1rem;
+                    }
+                    img {
+                        height: 10rem;
+                        width: 20rem;
+                    }
+                    .category-and-price-of-article {
+                        margin: 1rem;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 90%;
+                        
+                    }
+                    .description-of-article {
+                        height: 13rem;
+                        overflow-y: auto;
+                    }
+                    input {
+                        margin: 1rem;
+                    }
+                }
             }
+        }
+    }
 
-            .description-of-article {
-                height: 13rem;
-                overflow-y: auto;
-            }
-
-            input {
-                margin: 1rem;
-            }
+    #cart {
+        .cart-content {
+            padding-top: 10vh;
         }
     }
 
@@ -169,3 +179,5 @@ main {
         }
     }
 }
+
+    
