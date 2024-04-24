@@ -163,6 +163,8 @@ header {
   z-index: 100;
   display: flex;
   justify-content: space-between;
+  /* Default */
+  /* Checked */
 }
 header::after {
   content: "";
@@ -185,7 +187,6 @@ header section img {
   height: 75%;
 }
 header section h2 {
-  line-height: 0.5;
   margin-left: 2%;
   white-space: nowrap;
   font-family: "syncopate";
@@ -206,28 +207,63 @@ header nav ul {
 header nav ul li {
   justify-self: center;
   color: black;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.2537);
   padding: 4% 8%;
   margin: 1dvw;
   border-radius: 30px;
   cursor: pointer;
   font-family: "barlow";
+  font-size: 1em;
+  transition: 0.3s;
 }
 header nav ul li:hover {
-  background: rgba(255, 255, 255, 0.2537);
-  color: white;
+  background: rgba(255, 255, 255, 0.4);
+  font-family: "nanumPenScript";
+  font-size: 1.4em;
 }
-header nav ul .home {
-  grid-column: 1/2;
+header .darkModeDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
-header nav ul .menu {
-  grid-column: 2/3;
+header .darkModeDiv p {
+  font-family: "barlow";
+  font-size: 1em;
 }
-header nav ul .cart {
-  grid-column: 3/4;
+header .theme__toggle,
+header .theme__toggle:before {
+  display: block;
 }
-header nav ul .about {
-  grid-column: 4/5;
+header .theme__toggle {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 25%/50%;
+  box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.55);
+  padding: 0.17em;
+  width: 3em;
+  height: 1.5em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+header .theme__toggle:before {
+  background-color: #927a67;
+  border-radius: 50%;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+header .theme__toggle:checked {
+  /* modifie background color */
+  background-color: rgba(255, 255, 255, 0.4);
+}
+header .theme__toggle:checked:before,
+header .theme__toggle:checked ~ .theme__icon {
+  /* move the circle */
+  transform: translateX(1.25em);
+}
+header .theme__toggle:checked:before {
+  /* change circle color */
+  background-color: #927a67;
 }
 
 .flexCenter {
