@@ -1,77 +1,88 @@
-body{
-    max-width: 100%;
-    border: 0px;
-}
-
-footer{
+footer {
     max-height: 65%;
     padding-bottom: 20px;
     text-align: center;
     // background-image: url();  //possibilité de mettre unebackground img
     background-color: rgb(216, 215, 215);
-    h3{
+
+    h3 {
+        padding-left: 20px;
         padding-top: 10px;
         font-size: 25px;
     }
-        li{
-         list-style-type: none;
-        }
-        a{
-            text-decoration: none;
-            color: grey;
-            transition: 0.2s ease;
-            font-size: 20px;
-            padding: 5px;
-            
-            
-        }
 
-         .social_media{
-              
-              ul{
-                
-                li{
-                    display: inline;
-                    
-                    a{
-                        
-                        transition: 0.4s ease;
- 
-                        &:hover{
-                            transform: scale(1.2);
-                        }
+    li {
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: grey;
+        transition: 0.2s ease;
+        font-size: 20px;
+        padding: 5px;
+
+
+    }
+
+    .social_media {
+
+        ul {
+            padding-right: 20px;
+            padding-left: 50px;
+
+            li {
+                display: inline;
+
+                a {
+
+                    transition: 0.4s ease;
+
+                    &:hover {
+                        transform: scale(1.2);
                     }
                 }
-              }
-         }
-        .location{
-            a{
-                &:hover{
-                    transform: scale(1.2);
-                    box-shadow: 0px 2px 0px 0px ;
-                }
             }
         }
-        .policy_links{
-            a{
-                &:hover{
-                    transform: scale(1.2);
-                    box-shadow: 0px 2px 0px 0px ;
-                }
+    }
+
+    .location {
+        p {
+            padding-left: 20px;
+        }
+
+        a {
+            &:hover {
+                transform: scale(1.2);
+                box-shadow: 0px 2px 0px 0px;
             }
         }
-        .github_contributors{
-            padding-top: 10px;
-            a{
-                padding-right: 10px;
-               transition: 0.4s ease;
-               font-size: 35px;
-                &:hover{
-                    transform: scale(1.5);
-                }
+    }
+
+    .policy_links {
+        a {
+            &:hover {
+                transform: scale(1.2);
+                box-shadow: 0px 2px 0px 0px;
             }
         }
+    }
+
+    .github_contributors {
+        padding-top: 10px;
+
+        a {
+            padding-right: 10px;
+            transition: 0.4s ease;
+            font-size: 35px;
+
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+    }
 }
+
 // @media only screen and (max-height: 850px){
 //     footer{
 //         height: 100%;
