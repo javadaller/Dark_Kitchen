@@ -182,13 +182,15 @@ header nav ul li:hover {
   font-size: 1.4em;
 }
 header .darkModeDiv {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
-  justify-content: space-evenly;
+  width: 20%;
+  max-width: 120px;
 }
-header .darkModeDiv p {
-  font-family: "barlow";
-  font-size: 1em;
+header .darkModeDiv input {
+  justify-self: center;
 }
 header .theme__toggle,
 header .theme__toggle:before {

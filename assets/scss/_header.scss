@@ -67,17 +67,17 @@ header{
         }//end ul
     }//end nav
     .darkModeDiv{
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr;
         align-items: center;
-        justify-content: space-evenly;
-        p{
-            font-family: 'barlow';
-            font-size: 1em;
+        width: 20%;
+        max-width: 120px;
+        input {
+        justify-self: center;
         }
     }
-    // input {
-    //     align-self: center;
-    // }
+    
     
     /* Default */
     .theme__toggle,
