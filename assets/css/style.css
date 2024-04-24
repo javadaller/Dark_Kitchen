@@ -432,6 +432,33 @@ main #about div h3 {
   text-shadow: 0px 0px 8px #927a67;
   padding-bottom: 10px;
 }
+main #about div H4 {
+  font-family: "syncopateBold";
+  font-size: 2vw;
+}
+main #about div iframe {
+  padding-bottom: 10px;
+}
+main #about .team_about {
+  display: flex;
+  flex-direction: row;
+}
+main #about .team_about .team_name_link p {
+  padding-right: 50px;
+  padding-left: 50px;
+  text-align: center;
+}
+main #about .team_about .team_name_link a {
+  text-decoration: none;
+  transition: 0.4s ease;
+  font-size: 35px;
+  color: rgb(158, 158, 158);
+  padding-bottom: 30px;
+}
+main #about .team_about .team_name_link a:hover {
+  transform: scale(1.2);
+  color: rgb(213, 213, 213);
+}
 
 footer {
   color: #17170F;
