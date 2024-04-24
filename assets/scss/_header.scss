@@ -4,8 +4,11 @@ header{
     background-color: gainsboro;
     height: 9dvb;
     width:100%;
+    position: fixed;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
+
     section {
         height: 100%;
         // width: 25%;
@@ -42,6 +45,7 @@ header{
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 9dvh;
             align-items: center;
+            text-wrap: nowrap;
             li{
                 justify-self: center;
                 color: black;
