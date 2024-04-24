@@ -107,7 +107,8 @@ body {
   }
 }
 header {
-  background-color: gainsboro;
+  color: #c4c7be;
+  background-color: #62574E;
   height: 10%;
   width: 100%;
   display: flex;
@@ -197,14 +198,14 @@ main #home div img {
 main #home div h1 {
   font-family: "syncopateBold";
   font-size: 6vw;
-  color: white;
-  text-shadow: 0px 0px 8px rgb(0, 0, 0);
+  color: #c4c7be;
+  text-shadow: 0px 0px 8px #62574E;
 }
 main #home div p {
   font-family: "nanumPenScript";
   font-size: 4vw;
-  color: white;
-  text-shadow: 0px 0px 8px rgb(0, 0, 0);
+  color: #c4c7be;
+  text-shadow: 0px 0px 8px #62574E;
 }
 main #home div article {
   display: flex;
@@ -290,14 +291,14 @@ main #about div img {
 main #about div p {
   font-family: "nanumPenScript";
   font-size: 4vw;
-  color: white;
-  text-shadow: 0px 0px 8px rgb(0, 0, 0);
+  color: #c4c7be;
+  text-shadow: 0px 0px 8px #62574E;
 }
 main #about div h2 {
   font-family: "syncopateBold";
   font-size: 4vw;
-  color: white;
-  text-shadow: 0px 0px 8px rgb(0, 0, 0);
+  color: #c4c7be;
+  text-shadow: 0px 0px 8px #62574E;
 }
 
 body {
