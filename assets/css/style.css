@@ -487,10 +487,10 @@ main #about div H4 {
 }
 main #about div iframe {
   padding-bottom: 10px;
+  z-index: 2;
 }
 main #about .team_about {
   display: flex;
-  flex-direction: row;
 }
 main #about .team_about .team_name_link p {
   padding-right: 50px;
@@ -515,6 +515,7 @@ footer {
   max-height: 65%;
   padding-bottom: 20px;
   text-align: center;
+  display: block;
 }
 footer h3 {
   padding-left: 20px;
@@ -526,10 +527,13 @@ footer li {
 }
 footer a {
   text-decoration: none;
-  color: grey;
+  color: #5a5a5a;
   transition: 0.2s ease;
   font-size: 20px;
   padding: 5px;
+}
+footer a:hover {
+  color: #949494;
 }
 footer .social_media ul {
   padding-right: 20px;

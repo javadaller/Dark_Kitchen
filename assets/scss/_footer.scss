@@ -4,6 +4,8 @@ footer {
     max-height: 65%;
     padding-bottom: 20px;
     text-align: center;
+    display: block;
+    
 
     h3 {
         padding-left: 20px;
@@ -17,12 +19,14 @@ footer {
 
     a {
         text-decoration: none;
-        color: grey;
+        color: #5a5a5a;
         transition: 0.2s ease;
         font-size: 20px;
         padding: 5px;
 
-
+        &:hover{
+            color: #949494;
+        }
     }
 
     .social_media {
@@ -83,8 +87,3 @@ footer {
     }
 }
 
-// @media only screen and (max-height: 850px){
-//     footer{
-//         height: 100%;
-//     }
-// }

@@ -186,12 +186,13 @@ main {
 
             iframe {
                 padding-bottom: 10px;
+                z-index: 2;
             }
         }
 
         .team_about {
             display: flex;
-            flex-direction: row;
+            
 
             .team_name_link {
                 p {
@@ -217,4 +218,37 @@ main {
     }
 }
 
+//responsive about us map et wrap logo
+
+// @media only screen and (max-width: 700px){
     
+//     #about{
+
+    
+//       iframe{
+//         width: 50%;
+//         height: 30%;
+//       }
+//         .team_about{
+//             display: flex;
+//             flex-direction: column;  
+            
+//     }
+//     }
+    
+    
+// }
+    
+//responsive main home
+ 
+// @media only  screen and (max-width:510px){
+//     .darkMode{
+//         #home{
+//             div{
+//                 p{
+//                     font-size: 20px;
+//                 }
+//             }
+//         }
+//     }
+// }
