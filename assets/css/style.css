@@ -133,7 +133,7 @@ body {
 }
 
 .darkMode {
-  color: #c4c7be;
+  color: #e9ebe6;
   background-color: #583E31;
   transition: 0.3s;
 }
@@ -153,7 +153,7 @@ body {
 }
 
 .imgLightMode {
-  filter: brightness(300%) contrast(40%) !important;
+  filter: brightness(600%) contrast(40%) !important;
 }
 
 .imgDarkMode {
@@ -465,9 +465,11 @@ main #home div article {
   align-items: center;
   justify-content: center;
   margin-top: 5%;
+  width: 50%;
+  border-radius: 30px;
 }
 main #home div article p {
-  width: 50%;
+  width: 80%;
   height: auto;
   font-family: "barlow";
   font-size: 3vw;
@@ -642,31 +644,48 @@ main #menu .menu-and-articles .list-articles article input:hover:active {
 main #cart .cart-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border: 1px solid #927a67;
-  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-  width: 20rem;
+  width: 100%;
   border-radius: 10px;
-  position: absolute;
-  left: calc(50% - 10rem);
-  top: 40%;
+  height: 100vh;
 }
-main #cart .cart-content:hover {
-  box-shadow: 0 1px 3px 2px #583E31;
-  transition: all 0.2s;
+main #cart .cart-content .imgBackground {
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 65%;
+     object-position: 50% 65%;
+  filter: brightness(700%) contrast(40%);
 }
 main #cart .cart-content h2 {
+  z-index: 2;
+  margin-top: 25%;
   text-decoration: underline;
 }
 main #cart .cart-content ul {
+  z-index: 2;
+  padding-inline-start: 0;
   list-style: none;
   margin: 1rem;
+  width: 50%;
 }
 main #cart .cart-content ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
   margin: 0.5rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3019607843);
 }
 main #cart .cart-content ul li input {
-  width: 4rem;
+  width: 50px;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -698,15 +717,31 @@ main #about div img {
   filter: brightness(65%) contrast(100%) saturate(150%);
 }
 main #about div p {
+  margin-top: 25%;
   z-index: 2;
   font-family: "nanumPenScript";
-  font-size: 4vw;
+  font-size: 6vw;
   text-shadow: 0px 0px 8px #927a67;
+}
+@media only screen and (min-width: 650px) {
+  main #about div p {
+    margin-top: 15%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  main #about div p {
+    margin-top: 10%;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  main #about div p {
+    margin-top: 5%;
+  }
 }
 main #about div h2 {
   z-index: 2;
   font-family: "syncopateBold";
-  font-size: 4vw;
+  font-size: 7vw;
   text-shadow: 0px 0px 8px #927a67;
 }
 main #about div h3 {
@@ -736,12 +771,16 @@ main #about .team_about .team_name_link a {
   text-decoration: none;
   transition: 0.4s ease;
   font-size: 35px;
-  color: rgb(158, 158, 158);
   padding-bottom: 30px;
 }
 main #about .team_about .team_name_link a:hover {
   transform: scale(1.2);
-  color: rgb(213, 213, 213);
+}
+main #about .team_about .team_name_link a:link {
+  color: #17170F;
+}
+main #about .team_about .team_name_link a:visited {
+  color: #17170F;
 }
 
 @media only screen and (max-width: 700px) {
@@ -754,12 +793,8 @@ main #about .team_about .team_name_link a:hover {
     flex-direction: column;
   }
 }
-@media only screen and (max-width: 510px) {
-  .darkMode #home div p {
-    font-size: 20px;
-  }
-}
 footer {
+  z-index: 100;
   color: #17170F;
   background-color: #927a67;
   padding: 20px;

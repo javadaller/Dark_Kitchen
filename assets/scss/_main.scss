@@ -67,9 +67,11 @@ main {
                 align-items: center;
                 justify-content: center;
                 margin-top: 5%;
+                width:50%;
+                border-radius: 30px;
 
                 p {
-                    @include box(50%, auto);
+                    @include box(80%, auto);
                     font-family: 'barlow';
                     font-size: 3vw;
                     text-align: justify;
@@ -237,32 +239,45 @@ main {
 
     #cart {
         .cart-content {
-            // padding-top: 15vh;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
-            border: 1px solid $colorBackground;
-            box-shadow: $boxShadowDuPuissantDenisLePlusFortLePlusIntelligent;
-            width: 20rem;
-            // margin: auto;
+            width: 100%;
             border-radius: 10px;
-            position: absolute;
-            left: calc(50% - 10rem);
-            top: 40%;
-            &:hover {
-                box-shadow: 0 1px 3px 2px $colorBackgroundDark;
-                transition: all 0.2s;
+            height: 100vh;
+            .imgBackground {
+                background: #ffffff;
+                position:absolute;
+                top:0;
+                left:0;
+                @include box(100%);
+                object-fit: cover;
+                object-position: 50% 65%;
+                filter:brightness(700%) contrast(40%);
             }
+
             h2 {
+                z-index: 2;
+                margin-top: 25%;
                 text-decoration: underline;
             }
             ul {
+                z-index: 2;
+                padding-inline-start: 0;
                 list-style: none;
                 margin: 1rem;
+                width:50%;
                 li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap:30px;
                     margin: 0.5rem;
+                    font-weight: bold;
+                    text-shadow: 0px 0px 2px #0000004d;
                     input {
-                        width: 4rem;
+                        width: 50px;
                         padding: 5px;
                         border: 1px solid #ccc;
                         border-radius: 3px;
@@ -295,17 +310,27 @@ main {
             }
 
             p {
+                margin-top: 25%;
                 z-index: 2;
                 font-family: 'nanumPenScript';
-                font-size: 4vw;
+                font-size: 6vw;
                 //color:$colorText;
                 text-shadow: 0px 0px 8px $colorBackground;
+                @include responsive(650px) {
+                    margin-top: 15%;
+                }
+                @include responsive(1000px) {
+                    margin-top: 10%;
+                }
+                @include responsive(1300px) {
+                    margin-top: 5%;
+                }
             }
 
             h2 {
                 z-index: 2;
                 font-family: 'syncopateBold';
-                font-size: 4vw;
+                font-size: 7vw;
                 //color:$colorText;
                 text-shadow: 0px 0px 8px $colorBackground;
             }
@@ -348,12 +373,18 @@ main {
                     text-decoration: none;
                     transition: 0.4s ease;
                     font-size: 35px;
-                    color: rgb(158, 158, 158);
+                    //color: rgb(158, 158, 158);
                     padding-bottom: 30px;
 
                     &:hover {
                         transform: scale(1.2);
-                        color: rgb(213, 213, 213);
+                        //color: rgb(213, 213, 213);
+                    }
+                    &:link {
+                        color:$colorText;
+                    }
+                    &:visited {
+                        color:$colorText;
                     }
                 }
             }
@@ -384,14 +415,14 @@ main {
     
 // responsive main home
  
-@media only  screen and (max-width:510px){
-    .darkMode{
-        #home{
-            div{
-                p{
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-}
+// @media only  screen and (max-width:510px){
+//     .darkMode{
+//         #home{
+//             div{
+//                 p{
+//                     font-size: 20px;
+//                 }
+//             }
+//         }
+//     }
+// }
