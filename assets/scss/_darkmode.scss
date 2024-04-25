@@ -8,6 +8,14 @@
     background-color:$colorBackgroundDark;
 }
 
+.headerAfterLight::after {
+    background: linear-gradient(180deg, $colorBackgroundLight 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.headerAfterDark::after {
+    background: linear-gradient(180deg, $colorBackgroundDark 0%, rgba(0, 0, 0, 0) 100%);
+}
+
 .imgBackground {
     transition:0.3s;
 }
