@@ -226,7 +226,7 @@ main {
                             color: rgb(32, 32, 32);
                             transition: all 0.2s;
                             &:active{
-                                transform: translateY(3px);
+                                transform: scale(0.9);
                             }
                         }
                     }

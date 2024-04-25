@@ -628,7 +628,7 @@ main #menu .menu-and-articles .list-articles article input:hover {
   transition: all 0.2s;
 }
 main #menu .menu-and-articles .list-articles article input:hover:active {
-  transform: translateY(3px);
+  transform: scale(0.9);
 }
 main #cart .cart-content {
   padding-top: 10vh;
