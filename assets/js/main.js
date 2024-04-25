@@ -17,7 +17,7 @@ intro();
 
 //NAV
 const navArray=Array.from(document.querySelector('ul').children);
-
+navArray[0].style.display='none';
 for(let i=0; i<navArray.length; i++) {
     navArray[i].addEventListener('click', function() {
         navArray.forEach(element => {
