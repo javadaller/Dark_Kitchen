@@ -1,10 +1,23 @@
 @use "extends";
 
 main {
-
     #home {
-        @include box(100%);
-
+        @include box(100%,85vh);
+        @include responsive(1100px) {
+            height:95vh;
+        }
+        @include responsive(1200px) {
+            height:100vh;
+        }
+        @include responsive(1300px) {
+            height:105vh;
+        }
+        @include responsive(1400px) {
+            height:115vh;
+        }
+        @include responsive(1700px) {
+            height:125vh;
+        }
         div {
             position: relative;
             @include box(100%);
@@ -27,17 +40,24 @@ main {
             h1 {
                 z-index: 2;
                 font-family: 'syncopateBold';
-                font-size: 6vw;
+                font-size: 7vw;
                 //color:$colorText;
                 text-shadow: 0px 0px 8px $colorBackground;
+                @include responsive(1200px) {
+                    font-size: 6vw;
+                    margin-top: 5%;
+                }
             }
 
             p {
                 z-index: 2;
                 font-family: 'nanumPenScript';
-                font-size: 4vw;
+                font-size: 6vw;
                 //color:$colorText;
                 text-shadow: 0px 0px 8px $colorBackground;
+                @include responsive(1200px) {
+                    font-size: 4vw;
+                }
             }
 
             article {
@@ -46,17 +66,30 @@ main {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-
                 margin-top: 5%;
 
                 p {
                     @include box(50%, auto);
                     font-family: 'barlow';
-                    font-size: 1.8vw;
+                    font-size: 3vw;
                     text-align: justify;
-                    //background-color: white;
                     padding:3%;
                     border-radius: 25px;
+                    @include responsive(700px) {
+                        font-size: 2.5vw;
+                    }
+                    @include responsive(900px) {
+                        font-size: 2vw;
+                    }
+                    @include responsive(1100px) {
+                        font-size: 1.8vw;
+                    }
+                    @include responsive(1200px) {
+                        font-size: 1.5vw;
+                    }
+                    @include responsive(1400px) {
+                        font-size: 1.2vw;
+                    }
                 }
             }
         }
@@ -70,11 +103,23 @@ main {
         // flex-direction: column;
         // align-items: center;
         .menu-and-articles {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
+            .imgBackground {
+                background: #ffffff;
+                position:absolute;
+                top:0;
+                left:0;
+                @include box(100%);
+                object-fit: cover;
+                object-position: 50% 65%;
+                filter:brightness(300%) contrast(40%);
+            }
             .category-menu {
-                margin-top: 15vh;
+                z-index: 2;
+                margin-top: 30%;
                 padding: 2.5rem;
                 // border: 1px solid $colorBackground;
                 box-shadow: $boxShadowDuPuissantDenisLePlusFortLePlusIntelligent;
@@ -83,6 +128,19 @@ main {
                 align-items: center;
                 background-color: $colorBackground;
                 border-radius: 10px;
+                @include responsive(600px) {
+                    margin-top: 25%;
+                }
+                @include responsive(700px) {
+                    margin-top: 20%;
+                }
+                @include responsive(1000px) {
+                    margin-top: 15%;
+                }
+                @include responsive(1300px) {
+                    margin-top: 10%;
+                }
+
                 &:hover {
                     box-shadow: 0 1px 3px 2px $colorBackgroundDark;
                     transition: all 0.2s;
@@ -110,6 +168,7 @@ main {
                 }
             }
             .list-articles {
+                z-index: 2;
                 display: flex;
                 flex-flow: row wrap;
                 justify-content: center;
