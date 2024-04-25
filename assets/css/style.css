@@ -122,6 +122,10 @@ body {
     filter: blur(0);
   }
 }
+.fadeInIntro {
+  animation: fadeIn 1s linear forwards;
+}
+
 .lightMode {
   color: #17170F;
   background-color: #927a67;
@@ -130,6 +134,14 @@ body {
 .darkMode {
   color: #c4c7be;
   background-color: #583E31;
+}
+
+.headerAfterLight::after {
+  background: linear-gradient(180deg, #927a67 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.headerAfterDark::after {
+  background: linear-gradient(180deg, #583E31 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .imgBackground {
