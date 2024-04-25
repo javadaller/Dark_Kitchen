@@ -183,6 +183,7 @@ header {
   /* Checked */
 }
 header::after {
+  z-index: 100;
   content: "";
   position: absolute;
   bottom: -30px;
@@ -324,7 +325,32 @@ header .theme__toggle:checked:before {
 
 main #home {
   width: 100%;
-  height: 100%;
+  height: 85vh;
+}
+@media only screen and (min-width: 1100px) {
+  main #home {
+    height: 95vh;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main #home {
+    height: 100vh;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  main #home {
+    height: 105vh;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  main #home {
+    height: 115vh;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  main #home {
+    height: 125vh;
+  }
 }
 main #home div {
   position: relative;
@@ -351,14 +377,25 @@ main #home div img {
 main #home div h1 {
   z-index: 2;
   font-family: "syncopateBold";
-  font-size: 6vw;
+  font-size: 7vw;
   text-shadow: 0px 0px 8px #927a67;
+}
+@media only screen and (min-width: 1200px) {
+  main #home div h1 {
+    font-size: 6vw;
+    margin-top: 5%;
+  }
 }
 main #home div p {
   z-index: 2;
   font-family: "nanumPenScript";
-  font-size: 4vw;
+  font-size: 6vw;
   text-shadow: 0px 0px 8px #927a67;
+}
+@media only screen and (min-width: 1200px) {
+  main #home div p {
+    font-size: 4vw;
+  }
 }
 main #home div article {
   z-index: 2;
@@ -372,10 +409,35 @@ main #home div article p {
   width: 50%;
   height: auto;
   font-family: "barlow";
-  font-size: 1.8vw;
+  font-size: 3vw;
   text-align: justify;
   padding: 3%;
   border-radius: 25px;
+}
+@media only screen and (min-width: 700px) {
+  main #home div article p {
+    font-size: 2.5vw;
+  }
+}
+@media only screen and (min-width: 900px) {
+  main #home div article p {
+    font-size: 2vw;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  main #home div article p {
+    font-size: 1.8vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main #home div article p {
+    font-size: 1.5vw;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  main #home div article p {
+    font-size: 1.2vw;
+  }
 }
 main #menu {
   background-color: white;
@@ -383,12 +445,27 @@ main #menu {
   width: 100%;
 }
 main #menu .menu-and-articles {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+main #menu .menu-and-articles .imgBackground {
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 65%;
+     object-position: 50% 65%;
+  filter: brightness(300%) contrast(40%);
+}
 main #menu .menu-and-articles .category-menu {
-  margin-top: 15vh;
+  z-index: 2;
+  margin-top: 30%;
   padding: 2.5rem;
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
   display: flex;
@@ -396,6 +473,26 @@ main #menu .menu-and-articles .category-menu {
   align-items: center;
   background-color: #927a67;
   border-radius: 10px;
+}
+@media only screen and (min-width: 600px) {
+  main #menu .menu-and-articles .category-menu {
+    margin-top: 25%;
+  }
+}
+@media only screen and (min-width: 700px) {
+  main #menu .menu-and-articles .category-menu {
+    margin-top: 20%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  main #menu .menu-and-articles .category-menu {
+    margin-top: 15%;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  main #menu .menu-and-articles .category-menu {
+    margin-top: 10%;
+  }
 }
 main #menu .menu-and-articles .category-menu:hover {
   box-shadow: 0 1px 3px 2px #583E31;
@@ -423,6 +520,7 @@ main #menu .menu-and-articles .category-menu ul li.active-li {
   color: purple;
 }
 main #menu .menu-and-articles .list-articles {
+  z-index: 2;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -476,7 +574,7 @@ main #menu .menu-and-articles .list-articles article input {
 }
 main #menu .menu-and-articles .list-articles article input:hover {
   box-shadow: 0 1px 3px 2px #583E31;
-  color: purple;
+  color: rgb(32, 32, 32);
   transition: all 0.2s;
 }
 main #menu .menu-and-articles .list-articles article input:hover:active {
