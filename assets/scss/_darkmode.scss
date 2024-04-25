@@ -1,23 +1,29 @@
+$transition:0.3s;
+
 .lightMode {
     color:$colorTextLight;
     background-color:$colorBackgroundLight;
+    transition:$transition;
 }
 
 .darkMode {
     color:$colorTextDark;
     background-color:$colorBackgroundDark;
+    transition:$transition;
 }
 
 .headerAfterLight::after {
     background: linear-gradient(180deg, $colorBackgroundLight 0%, rgba(0, 0, 0, 0) 100%);
+    transition:$transition;
 }
 
 .headerAfterDark::after {
     background: linear-gradient(180deg, $colorBackgroundDark 0%, rgba(0, 0, 0, 0) 100%);
+    transition:$transition;
 }
 
 .imgBackground {
-    transition:0.3s;
+    transition:$transition;
 }
 
 .imgLightMode {

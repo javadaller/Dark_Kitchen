@@ -1,8 +1,6 @@
 @use "extends";
 
 main {
-    height: 100vh;
-
 
     #home {
         @include box(100%);
