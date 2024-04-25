@@ -478,7 +478,6 @@ main #about div iframe {
 }
 main #about .team_about {
   display: flex;
-  flex-direction: row;
 }
 main #about .team_about .team_name_link p {
   padding-right: 50px;
@@ -557,10 +556,4 @@ footer .github_contributors a {
 }
 footer .github_contributors a:hover {
   transform: scale(1.5);
-}
-
-@media only screen and (max-height: 850px) {
-  footer {
-    height: 100%;
-  }
 }/*# sourceMappingURL=style.css.map */
