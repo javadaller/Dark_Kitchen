@@ -500,7 +500,6 @@ main #menu .menu-and-articles .category-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #927a67;
   border-radius: 10px;
 }
 @media only screen and (min-width: 600px) {
@@ -557,7 +556,6 @@ main #menu .menu-and-articles .list-articles {
 main #menu .menu-and-articles .list-articles article {
   height: 35rem;
   width: 25rem;
-  background-color: #927a67;
   margin: 1rem;
   display: flex;
   flex-direction: column;
@@ -717,14 +715,11 @@ main #about .team_about .team_name_link a:hover {
 footer {
   color: #17170F;
   background-color: #927a67;
-  max-height: 65%;
-  padding-bottom: 20px;
+  padding: 20px;
   text-align: center;
   display: block;
 }
 footer h3 {
-  padding-left: 20px;
-  padding-top: 10px;
   font-size: 25px;
 }
 footer li {
@@ -732,7 +727,6 @@ footer li {
 }
 footer a {
   text-decoration: none;
-  color: #5a5a5a;
   transition: 0.2s ease;
   font-size: 20px;
   padding: 5px;
@@ -741,8 +735,7 @@ footer a:hover {
   color: #949494;
 }
 footer .social_media ul {
-  padding-right: 20px;
-  padding-left: 50px;
+  padding-inline-start: 0;
 }
 footer .social_media ul li {
   display: inline;
@@ -753,25 +746,51 @@ footer .social_media ul li a {
 footer .social_media ul li a:hover {
   transform: scale(1.2);
 }
-footer .location p {
-  padding-left: 20px;
+footer .social_media ul li a:link {
+  color: #17170F;
+}
+footer .social_media ul li a:visited {
+  color: #17170F;
 }
 footer .location a:hover {
   transform: scale(1.2);
   box-shadow: 0px 2px 0px 0px;
 }
-footer .policy_links a:hover {
+footer .location a:link {
+  color: #17170F;
+}
+footer .location a:visited {
+  color: #17170F;
+}
+footer .policy_links ul {
+  padding-inline-start: 0;
+}
+footer .policy_links ul a:hover {
   transform: scale(1.2);
   box-shadow: 0px 2px 0px 0px;
+}
+footer .policy_links ul a:link {
+  color: #17170F;
+}
+footer .policy_links ul a:visited {
+  color: #17170F;
 }
 footer .github_contributors {
   padding-top: 10px;
 }
-footer .github_contributors a {
-  padding-right: 10px;
+footer .github_contributors ul {
+  padding-inline-start: 0;
+}
+footer .github_contributors ul a {
   transition: 0.4s ease;
   font-size: 35px;
 }
-footer .github_contributors a:hover {
+footer .github_contributors ul a:hover {
   transform: scale(1.5);
+}
+footer .github_contributors ul a:link {
+  color: #17170F;
+}
+footer .github_contributors ul a:visited {
+  color: #17170F;
 }/*# sourceMappingURL=style.css.map */

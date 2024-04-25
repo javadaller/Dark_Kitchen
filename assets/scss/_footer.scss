@@ -1,15 +1,13 @@
 footer {
     color:$colorText;
     background-color: $colorBackground;
-    max-height: 65%;
-    padding-bottom: 20px;
+    //max-height: 65%;
+    padding: 20px;
     text-align: center;
     display: block;
     
 
     h3 {
-        padding-left: 20px;
-        padding-top: 10px;
         font-size: 25px;
     }
 
@@ -19,7 +17,7 @@ footer {
 
     a {
         text-decoration: none;
-        color: #5a5a5a;
+        //color: #5a5a5a;
         transition: 0.2s ease;
         font-size: 20px;
         padding: 5px;
@@ -32,8 +30,7 @@ footer {
     .social_media {
 
         ul {
-            padding-right: 20px;
-            padding-left: 50px;
+            padding-inline-start: 0;
 
             li {
                 display: inline;
@@ -45,43 +42,69 @@ footer {
                     &:hover {
                         transform: scale(1.2);
                     }
+                    &:link {
+                        color:$colorText;
+                    }
+                    &:visited {
+                        color:$colorText;
+                    }
                 }
             }
         }
     }
 
     .location {
-        p {
-            padding-left: 20px;
-        }
-
         a {
             &:hover {
                 transform: scale(1.2);
                 box-shadow: 0px 2px 0px 0px;
             }
+            &:link {
+                color:$colorText;
+            }
+            &:visited {
+                color:$colorText;
+            }
         }
     }
 
     .policy_links {
-        a {
-            &:hover {
-                transform: scale(1.2);
-                box-shadow: 0px 2px 0px 0px;
+        ul {
+            padding-inline-start: 0;
+
+            a {
+                &:hover {
+                    transform: scale(1.2);
+                    box-shadow: 0px 2px 0px 0px;
+                }
+                &:link {
+                    color:$colorText;
+                }
+                &:visited {
+                    color:$colorText;
+                }
             }
         }
     }
 
     .github_contributors {
         padding-top: 10px;
+        ul {
+            padding-inline-start: 0;
 
-        a {
-            padding-right: 10px;
-            transition: 0.4s ease;
-            font-size: 35px;
+            a {
+                transition: 0.4s ease;
+                font-size: 35px;
 
-            &:hover {
-                transform: scale(1.5);
+                &:hover {
+                    transform: scale(1.5);
+                }
+                &:link {
+                    color:$colorText;
+                }
+                &:visited {
+                    color:$colorText;
+                }
             }
         }
     }

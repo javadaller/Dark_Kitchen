@@ -46,7 +46,7 @@ const body=document.querySelector('body');
 const header=document.querySelector('header');
 const footer=document.querySelector('footer');
 const doc=[body,header,main,footer];
-const pageArray=[...doc,...Array.from(document.querySelectorAll('.toDark'))];
+const pageArray=[...doc,...Array.from(document.querySelectorAll('.toDark')),...Array.from(document.querySelectorAll('article')),document.querySelector('.category-menu')];
 const svgs=Array.from(document.querySelectorAll('.svgToDark'));
 const images=document.querySelectorAll('.imgBackground');
 

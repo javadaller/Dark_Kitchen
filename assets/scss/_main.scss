@@ -126,7 +126,7 @@ main {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                background-color: $colorBackground;
+                //background-color: $colorBackground;
                 border-radius: 10px;
                 @include responsive(600px) {
                     margin-top: 25%;
@@ -175,7 +175,7 @@ main {
                 article {
                     height: 35rem;
                     width: 25rem;
-                    background-color: $colorBackground;
+                    //background-color: $colorBackground;
                     margin: 1rem;
                     display: flex;
                     flex-direction: column;

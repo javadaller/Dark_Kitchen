@@ -89,6 +89,7 @@ const displayArticles = () => {
     })
     .map(item => {
         const article = document.createElement('article')
+        article.classList.add('lightMode')
         article.innerHTML = `
         <h3>${item.name}</h3>
         <img src="${item.picture}" alt="${item.name}">
