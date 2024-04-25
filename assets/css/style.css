@@ -466,7 +466,37 @@ main #menu .menu-and-articles .list-articles article input:hover {
   transition: all 0.2s;
 }
 main #cart .cart-content {
-  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #927a67;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  width: 20rem;
+  border-radius: 10px;
+  position: absolute;
+  left: calc(50% - 10rem);
+  top: 40%;
+}
+main #cart .cart-content:hover {
+  box-shadow: 0 1px 3px 2px #583E31;
+  transition: all 0.2s;
+}
+main #cart .cart-content h2 {
+  text-decoration: underline;
+}
+main #cart .cart-content ul {
+  list-style: none;
+  margin: 1rem;
+}
+main #cart .cart-content ul li {
+  margin: 0.5rem;
+}
+main #cart .cart-content ul li input {
+  width: 4rem;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: center;
 }
 main #about {
   width: 100%;
