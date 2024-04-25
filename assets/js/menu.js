@@ -60,15 +60,15 @@ const entriesOfcreateFilter = Object.entries(createFilter)
 const displayFilter = entriesOfcreateFilter.map(cat => {
     const liCategoryMenu = document.createElement('li')
     liCategoryMenu.innerText = `
-        ${cat[0]}(${cat[1]}),
+        ${cat[0]}(${cat[1]})
     `
     liCategoryMenu.addEventListener('click', () => {
         if (filter === cat[0]) {
             filter = null
-            // liCategoryMenu.classList.remove("active-li")
+            liCategoryMenu.classList.remove("active-li")
         } else {
             filter = cat[0]
-            // liCategoryMenu.classList.add("active-li")
+            liCategoryMenu.classList.add("active-li")
         }
         listArticles.innerHTML = ''
         displayArticles()
@@ -101,6 +101,7 @@ const displayArticles = () => {
         </p>
         <input type="button" value="add to cart">
         `
+
         const input = article.querySelector('input')
         input.addEventListener('click', () => {
             addToCart(item)

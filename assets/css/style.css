@@ -365,7 +365,7 @@ main #home div article p {
   border-radius: 25px;
 }
 main #menu {
-  background-color: aqua;
+  background-color: white;
   height: auto;
   width: 100%;
 }
@@ -375,13 +375,39 @@ main #menu .menu-and-articles {
   align-items: center;
 }
 main #menu .menu-and-articles .category-menu {
-  padding-top: 10vh;
+  margin-top: 15vh;
+  padding: 2.5rem;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #927a67;
+  border-radius: 10px;
+}
+main #menu .menu-and-articles .category-menu:hover {
+  box-shadow: 0 1px 3px 2px #583E31;
+  transition: all 0.2s;
+}
+main #menu .menu-and-articles .category-menu h2 {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 main #menu .menu-and-articles .category-menu ul {
   list-style: none;
+  padding: 0;
 }
 main #menu .menu-and-articles .category-menu ul li {
   display: inline-block;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 0.5rem;
+}
+main #menu .menu-and-articles .category-menu ul li:hover {
+  color: purple;
+  transition: all 0.2s;
+  transform: scale(1.1);
+}
+main #menu .menu-and-articles .category-menu ul li.active-li {
+  color: purple;
 }
 main #menu .menu-and-articles .list-articles {
   display: flex;
@@ -391,11 +417,13 @@ main #menu .menu-and-articles .list-articles {
 main #menu .menu-and-articles .list-articles article {
   height: 35rem;
   width: 25rem;
-  background-color: red;
+  background-color: #927a67;
   margin: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
 main #menu .menu-and-articles .list-articles article * {
   max-width: 80%;
@@ -406,6 +434,13 @@ main #menu .menu-and-articles .list-articles article h3 {
 main #menu .menu-and-articles .list-articles article img {
   height: 10rem;
   width: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #menu .menu-and-articles .list-articles article img:hover {
+  box-shadow: 0 1px 3px 2px #583E31;
+  transition: all 0.2s;
+  transform: scale(1.1);
 }
 main #menu .menu-and-articles .list-articles article .category-and-price-of-article {
   margin: 1rem;
@@ -420,6 +455,15 @@ main #menu .menu-and-articles .list-articles article .description-of-article {
 }
 main #menu .menu-and-articles .list-articles article input {
   margin: 1rem;
+  border: 1px solid #583E31;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+main #menu .menu-and-articles .list-articles article input:hover {
+  box-shadow: 0 1px 3px 2px #583E31;
+  color: purple;
+  transition: all 0.2s;
 }
 main #cart .cart-content {
   padding-top: 10vh;
