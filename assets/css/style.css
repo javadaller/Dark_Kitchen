@@ -594,6 +594,7 @@ main #menu .menu-and-articles .list-articles article .description-of-article {
   overflow-y: auto;
 }
 main #menu .menu-and-articles .list-articles article input {
+  padding: 10px 20px;
   margin: 1rem;
   border: 1px solid #583E31;
   border-radius: 3px;
@@ -602,8 +603,11 @@ main #menu .menu-and-articles .list-articles article input {
 }
 main #menu .menu-and-articles .list-articles article input:hover {
   box-shadow: 0 1px 3px 2px #583E31;
-  color: purple;
+  color: rgb(32, 32, 32);
   transition: all 0.2s;
+}
+main #menu .menu-and-articles .list-articles article input:hover:active {
+  transform: scale(0.9);
 }
 main #cart .cart-content {
   display: flex;
