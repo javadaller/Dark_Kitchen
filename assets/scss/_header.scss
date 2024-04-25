@@ -1,4 +1,4 @@
-
+@use "variables";
 
 header{
     color:$colorText;
@@ -9,6 +9,15 @@ header{
     z-index: 100;
     display: flex;
     justify-content: space-between;
+
+    &::after {
+        content:"";
+        position: absolute;
+        bottom:-30px;
+        left:0;
+        background: linear-gradient(180deg, $colorBackground 0%, rgba(0, 0, 0, 0) 100%);
+        @include box(100%,30px);
+    }
 
     section {
         height: 100%;
@@ -22,8 +31,8 @@ header{
         }
         h2{
             margin-left: 2%;
-            text-wrap:nowrap;
-            padding: 1%;
+            white-space: nowrap;
+            //padding: 1%;
             font: {
                 family :'syncopate';
                 size: 1.6em;
