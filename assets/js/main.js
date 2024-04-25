@@ -20,6 +20,10 @@ const navArray=Array.from(document.querySelector('ul').children);
 
 for(let i=0; i<navArray.length; i++) {
     navArray[i].addEventListener('click', function() {
+        navArray.forEach(element => {
+            element.style.display='block';
+        });
+        this.style.display='none';
         switchAnimation(sectionArray[i]);
     })
 }
