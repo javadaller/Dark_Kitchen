@@ -712,6 +712,21 @@ main #about .team_about .team_name_link a:hover {
   color: rgb(213, 213, 213);
 }
 
+@media only screen and (max-width: 700px) {
+  #about iframe {
+    width: 50%;
+    height: 30%;
+  }
+  #about .team_about {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .darkMode #home div p {
+    font-size: 20px;
+  }
+}
 footer {
   color: #17170F;
   background-color: #927a67;
