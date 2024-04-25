@@ -8,8 +8,9 @@ header{
     position: fixed;
     z-index: 100;
     display: flex;
+    justify-content: space-between;
     @include responsive(960px){
-        justify-content: space-between;
+        
         height: 9dvh;
     }
         
@@ -50,15 +51,33 @@ header{
     
     nav{
         width: auto;
+        height: 100%;
         margin-right: 2%;
-        .menuButton{
-            
-            @include responsive(960px){
-                display: none;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 15dvw 10dvw;
+        justify-items: center;
+        justify-self: end;
+        @include responsive(960px){
+            grid-template-columns: 1fr 4fr;
+        }    
+        #navButton{
+            height: 80%;
+            max-height: 4dvh;
+            border : none;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.2537);
+            img{
+                width: auto;
+                max-height: 75%;
+                @include responsive(960px){
+                    display: none;
+                }
             }
         }    
         ul{
             display:none;
+            
             @include responsive(960px){
                 list-style: none;
                 display:grid;
@@ -89,19 +108,24 @@ header{
                     transform: scale(1.2);
                 }
         }//end ul
-    }//end nav
-    .darkModeDiv{
+        .darkModeDiv{
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 1fr;
         align-items: center;
         justify-content: center;
-        width: 20%;
+        width: auto;
         max-width: 120px;
         input {
         justify-self: center;
         }
+        img{
+            max-height: 15px;
+        }
+
     }
+    }//end nav
+    
     
     
     /* Default */
@@ -118,10 +142,6 @@ header{
         height: 0.5em;
 	    -webkit-appearance: none;
 	    appearance: none;
-        @include responsive(960px){
-            width: 3em;
-    	    height: 1.5em;
-            }
     }
     .theme__toggle:before {
 	    background-color: $colorBackground;
@@ -139,10 +159,7 @@ header{
     .theme__toggle:checked ~ .theme__icon {
     	/* move the circle */
         transform: translate(0.4em)
-        @include responsive(960px){
-            transform: translateX(1.25em);
-            }
-    	
+        
     }
     .theme__toggle:checked:before {
     	/* change circle color */
