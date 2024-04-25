@@ -3,13 +3,14 @@
 header{
     color:$colorText;
     background-color: $colorBackground;
-    height: 9dvh;
+    height: 5dvh;
     width:100%;
     position: fixed;
     z-index: 100;
     display: flex;
     @include responsive(960px){
         justify-content: space-between;
+        height: 9dvh;
     }
         
 
@@ -38,23 +39,35 @@ header{
             //padding: 1%;
             font: {
                 family :'syncopate';
-                size: 1.6em;
-            }            
+                size : 0.8em;
+            } 
+            @include responsive(960px){
+                font-size: 1.6em;
+            }           
         }//end h2
         
     }//end section logoAndTitle
-
+    
     nav{
         width: auto;
         margin-right: 2%;
-        ul{
-            list-style: none;
-            display:grid;
+        .menuButton{
             
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 9dvh;
-            align-items: center;
-            text-wrap: nowrap;
+            @include responsive(960px){
+                display: none;
+            }
+        }    
+        ul{
+            display:none;
+            @include responsive(960px){
+                list-style: none;
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 9dvh;
+                align-items: center;
+                text-wrap: nowrap;
+            }
+
             li{
                 justify-self: center;
                 color: black;
@@ -101,10 +114,14 @@ header{
     	border-radius: 25% / 50%;
 	    box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.55);
     	padding: 0.17em;
-	    width: 3em;
-    	height: 1.5em;
+	    width:1em ;
+        height: 0.5em;
 	    -webkit-appearance: none;
 	    appearance: none;
+        @include responsive(960px){
+            width: 3em;
+    	    height: 1.5em;
+            }
     }
     .theme__toggle:before {
 	    background-color: $colorBackground;
@@ -121,7 +138,11 @@ header{
     .theme__toggle:checked:before,
     .theme__toggle:checked ~ .theme__icon {
     	/* move the circle */
-    	transform: translateX(1.25em);
+        transform: translate(0.4em)
+        @include responsive(960px){
+            transform: translateX(1.25em);
+            }
+    	
     }
     .theme__toggle:checked:before {
     	/* change circle color */
