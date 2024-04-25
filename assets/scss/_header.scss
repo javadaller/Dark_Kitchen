@@ -3,12 +3,17 @@
 header{
     color:$colorText;
     background-color: $colorBackground;
-    height: 9dvh;
+    height: 5dvh;
     width:100%;
     position: fixed;
     z-index: 100;
     display: flex;
     justify-content: space-between;
+    @include responsive(960px){
+        
+        height: 9dvh;
+    }
+        
 
     &::after {
         z-index: 100;
@@ -36,28 +41,59 @@ header{
             //padding: 1%;
             font: {
                 family :'syncopate';
-                size: 1.6em;
-            }            
+                size : 0.8em;
+            } 
+            @include responsive(960px){
+                font-size: 1.6em;
+            }           
         }//end h2
         
     }//end section logoAndTitle
-
+    
     nav{
-        width: 45%;
+        width: auto;
+        height: 100%;
         margin-right: 2%;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 15dvw 10dvw;
+        justify-items: center;
+        justify-self: end;
+        @include responsive(960px){
+            grid-template-columns: 1fr 4fr;
+        }    
+        #navButton{
+            height: 80%;
+            max-height: 4dvh;
+            border : none;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.2537);
+            img{
+                width: auto;
+                max-height: 75%;
+                @include responsive(960px){
+                    display: none;
+                }
+            }
+        }    
         ul{
-            list-style: none;
-            display:grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 9dvh;
-            align-items: center;
-            text-wrap: nowrap;
+            display:none;
+            
+            @include responsive(960px){
+                list-style: none;
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 9dvh;
+                align-items: center;
+                text-wrap: nowrap;
+            }
+
             li{
                 justify-self: center;
                 color: black;
                 background-color: rgba(255, 255, 255, 0.2537);
-                // width: 70%;
-                // text-align: center;
+                min-width: 100px;
+                text-align: center;
                 padding: 4% 8%;
                 margin: 1dvw;
                 border-radius: 30px;
@@ -70,24 +106,28 @@ header{
             li:hover{
                     background: rgba(255, 255, 255, 0.40);
                     font-family: 'nanumPenScript';
-                    font-size: 1.4em;
-
-                    // color: white;
+                    transform: scale(1.2);
                 }
         }//end ul
-    }//end nav
-    .darkModeDiv{
-        display: flex;
+        .darkModeDiv{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr;
         align-items: center;
-        justify-content: space-evenly;
-        p{
-            font-family: 'barlow';
-            font-size: 1em;
+        justify-content: center;
+        width: auto;
+        max-width: 120px;
+        input {
+        justify-self: center;
         }
+        img{
+            max-height: 15px;
+        }
+
     }
-    // input {
-    //     align-self: center;
-    // }
+    }//end nav
+    
+    
     
     /* Default */
     .theme__toggle,
@@ -99,8 +139,8 @@ header{
     	border-radius: 25% / 50%;
 	    box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.55);
     	padding: 0.17em;
-	    width: 3em;
-    	height: 1.5em;
+	    width:1em ;
+        height: 0.5em;
 	    -webkit-appearance: none;
 	    appearance: none;
     }
@@ -119,28 +159,13 @@ header{
     .theme__toggle:checked:before,
     .theme__toggle:checked ~ .theme__icon {
     	/* move the circle */
-    	transform: translateX(1.25em);
+        transform: translate(0.4em)
+        
     }
     .theme__toggle:checked:before {
     	/* change circle color */
     	background-color: $colorBackground;
     }
-      
+    
 }//end header
 
-// @media  and (max-width : 500px) {
-//    header {
-//     background-color: #2897b9;
-    
-//     .imgLogo{
-        
-//     }
-//     /*section{
-//         height: 10%;
-//         img{
-//             height : 30px;
-//             width: auto;
-//         }
-//     }*/
-// } 
-// }

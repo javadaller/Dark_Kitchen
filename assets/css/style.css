@@ -173,7 +173,7 @@ body {
 header {
   color: #17170F;
   background-color: #927a67;
-  height: 9dvh;
+  height: 5dvh;
   width: 100%;
   position: fixed;
   z-index: 100;
@@ -181,6 +181,11 @@ header {
   justify-content: space-between;
   /* Default */
   /* Checked */
+}
+@media only screen and (min-width: 960px) {
+  header {
+    height: 9dvh;
+  }
 }
 header::after {
   z-index: 100;
@@ -207,24 +212,63 @@ header section h2 {
   margin-left: 2%;
   white-space: nowrap;
   font-family: "syncopate";
-  font-size: 1.6em;
+  font-size: 0.8em;
+}
+@media only screen and (min-width: 960px) {
+  header section h2 {
+    font-size: 1.6em;
+  }
 }
 header nav {
-  width: 45%;
+  width: auto;
+  height: 100%;
   margin-right: 2%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 15dvw 10dvw;
+  justify-items: center;
+  justify-self: end;
+}
+@media only screen and (min-width: 960px) {
+  header nav {
+    grid-template-columns: 1fr 4fr;
+  }
+}
+header nav #navButton {
+  height: 80%;
+  max-height: 4dvh;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2537);
+}
+header nav #navButton img {
+  width: auto;
+  max-height: 75%;
+}
+@media only screen and (min-width: 960px) {
+  header nav #navButton img {
+    display: none;
+  }
 }
 header nav ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 9dvh;
-  align-items: center;
-  text-wrap: nowrap;
+  display: none;
+}
+@media only screen and (min-width: 960px) {
+  header nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 9dvh;
+    align-items: center;
+    text-wrap: nowrap;
+  }
 }
 header nav ul li {
   justify-self: center;
   color: black;
   background-color: rgba(255, 255, 255, 0.2537);
+  min-width: 100px;
+  text-align: center;
   padding: 4% 8%;
   margin: 1dvw;
   border-radius: 30px;
@@ -236,16 +280,22 @@ header nav ul li {
 header nav ul li:hover {
   background: rgba(255, 255, 255, 0.4);
   font-family: "nanumPenScript";
-  font-size: 1.4em;
+  transform: scale(1.2);
 }
-header .darkModeDiv {
-  display: flex;
+header nav .darkModeDiv {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  width: auto;
+  max-width: 120px;
 }
-header .darkModeDiv p {
-  font-family: "barlow";
-  font-size: 1em;
+header nav .darkModeDiv input {
+  justify-self: center;
+}
+header nav .darkModeDiv img {
+  max-height: 15px;
 }
 header .theme__toggle,
 header .theme__toggle:before {
@@ -256,8 +306,8 @@ header .theme__toggle {
   border-radius: 25%/50%;
   box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.55);
   padding: 0.17em;
-  width: 3em;
-  height: 1.5em;
+  width: 1em;
+  height: 0.5em;
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -276,7 +326,7 @@ header .theme__toggle:checked {
 header .theme__toggle:checked:before,
 header .theme__toggle:checked ~ .theme__icon {
   /* move the circle */
-  transform: translateX(1.25em);
+  transform: translate(0.4em);
 }
 header .theme__toggle:checked:before {
   /* change circle color */
