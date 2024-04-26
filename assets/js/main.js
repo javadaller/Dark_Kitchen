@@ -2,37 +2,42 @@
 const main=document.querySelector('main');
 const home=document.querySelector('#home');
 
-const navArray=Array.from(document.querySelector('ul').children);
 const sectionArray=Array.from(document.querySelector('main').children);
 sectionArray.forEach(section => {
     section.style.display='none';
 });
 
 async function intro() {
-    document.body.classList.add('fadeIn');
+    document.body.classList.add('fadeInIntro');
     home.style.display='block';
-    await sleep(400);
-    document.body.classList.remove('fadeIn');
+    await sleep(1000);
+    document.body.classList.remove('fadeInIntro');
 }
 intro();
 
 //NAV
+const navArray=Array.from(document.querySelector('ul').children);
+
 for(let i=0; i<navArray.length; i++) {
     navArray[i].addEventListener('click', function() {
+        navArray.forEach(element => {
+            element.style.display='block';
+        });
+        this.style.display='none';
         switchAnimation(sectionArray[i]);
     })
 }
 
 async function switchAnimation(section) {
     main.classList.add('fadeOut');
-    await sleep(400);
+    await sleep(300);
     sectionArray.forEach(section => {
         section.style.display='none';
     });
     section.style.display='block';
     main.classList.remove('fadeOut');
     main.classList.add('fadeIn');
-    await sleep(400);
+    await sleep(300);
     main.classList.remove('fadeIn');
 }
 
@@ -43,7 +48,6 @@ const footer=document.querySelector('footer');
 const doc=[body,header,main,footer];
 const pageArray=[...doc,...Array.from(document.querySelectorAll('.toDark'))];
 const svgs=Array.from(document.querySelectorAll('.svgToDark'));
-
 const images=document.querySelectorAll('.imgBackground');
 
 const inputDarkMode=document.querySelector('#theme');
@@ -54,6 +58,9 @@ inputDarkMode.addEventListener('click', function(){
             element.classList.add('darkMode');
             element.classList.remove('lightMode'); 
         });
+
+        header.classList.add('headerAfterDark');
+        header.classList.remove('headerAfterLight');
 
         images.forEach(element => {
             element.classList.add('imgDarkMode');
@@ -66,10 +73,14 @@ inputDarkMode.addEventListener('click', function(){
         })
         
     } else {
+
         pageArray.forEach(element => {
             element.classList.remove('darkMode');
             element.classList.add('lightMode'); 
         });
+
+        header.classList.remove('headerAfterDark');
+        header.classList.add('headerAfterLight');
 
         images.forEach(element => {
             element.classList.remove('imgDarkMode');
