@@ -691,6 +691,9 @@ main #cart .cart-content ul li input {
   border-radius: 3px;
   text-align: center;
 }
+main #cart .cart-content h3 {
+  z-index: 2;
+}
 main #about {
   width: 100%;
   height: 100%;
